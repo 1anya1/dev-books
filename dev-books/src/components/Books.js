@@ -7,15 +7,28 @@ class Books extends Component {
     componentDidMount(){
         this.getBooks()
     }
-    getBooks= ()=>{
+    getBooks = () =>{
         fetch('http://localhost:3000/books')
             .then(response =>response.json())
-            .then(json=> console.log(json))
+            //this line of code is passing in the info from our ruby file via json AJAX requeest 
+            .then(json => this.setState({ books: json }))
         .catch(error => console.log(error))
     }
     render () {
+        // console.log(this.state.books)
         return (
-            <h1>Notices</h1>
+            <div>
+                {this.state.books.map( book => {
+                    return (
+                    <div key={book.id} className='book'>
+                        <h3>{book.name}</h3>
+                        <h4>{book.author}</h4>
+                        <h5>{book.published}</h5>
+
+                    </div>
+                    )
+                })}
+            </div>
         )
     }
 }
