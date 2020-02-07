@@ -10361,3 +10361,974 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 2.4ms | Allocations: 2648)
 
 
+Started GET "/books" for ::1 at 2020-02-06 23:00:31 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (2.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 47.3ms | ActiveRecord: 2.4ms | Allocations: 2744)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:01:40 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.8ms | Allocations: 2648)
+
+
+Started POST "/books" for ::1 at 2020-02-06 23:01:45 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (2.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 07:01:45.443330"], ["updated_at", "2020-02-07 07:01:45.443330"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 13ms (Views: 2.4ms | ActiveRecord: 3.3ms | Allocations: 2455)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:01:48 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.8ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:13:52 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 78ms (Views: 73.2ms | ActiveRecord: 1.3ms | Allocations: 2885)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:19:15 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.9ms | Allocations: 2885)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:19:17 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.4ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:20:26 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:21:19 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.9ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:22:05 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:22:09 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 2789)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:22:18 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:23:59 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:25:03 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 1.4ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:25:06 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.7ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:26:45 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 1.5ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:26:48 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms | Allocations: 2788)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:30:37 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (8.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 105ms (Views: 93.6ms | ActiveRecord: 8.3ms | Allocations: 2789)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:30:38 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.7ms | Allocations: 2789)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:31:15 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms | Allocations: 2789)
+
+
+Started POST "/books" for ::1 at 2020-02-06 23:31:52 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.2ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 07:31:52.622291"], ["updated_at", "2020-02-07 07:31:52.622291"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 9ms (Views: 0.9ms | ActiveRecord: 1.8ms | Allocations: 2392)
+
+
+Started POST "/books" for ::1 at 2020-02-06 23:31:58 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.7ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 07:31:58.875806"], ["updated_at", "2020-02-07 07:31:58.875806"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 8ms (Views: 0.7ms | ActiveRecord: 2.4ms | Allocations: 2390)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:32:01 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.4ms | Allocations: 3068)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:35:01 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 19.3ms | ActiveRecord: 1.4ms | Allocations: 3068)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:35:02 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 1.5ms | Allocations: 3069)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:38:37 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (2.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 2.6ms | Allocations: 3068)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:38:40 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (2.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 2.4ms | Allocations: 3068)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:39:47 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.4ms | Allocations: 3068)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:39:50 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.5ms | Allocations: 3068)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:40:17 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 1.8ms | Allocations: 3068)
+
+
+Started POST "/books" for ::1 at 2020-02-06 23:40:18 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 07:40:18.565850"], ["updated_at", "2020-02-07 07:40:18.565850"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 31ms (Views: 0.8ms | ActiveRecord: 1.8ms | Allocations: 2391)
+
+
+Started POST "/books" for ::1 at 2020-02-06 23:40:19 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 07:40:19.832485"], ["updated_at", "2020-02-07 07:40:19.832485"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 11ms (Views: 1.9ms | ActiveRecord: 1.1ms | Allocations: 2391)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:40:21 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (2.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 2.1ms | Allocations: 3349)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:46:45 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.8ms | Allocations: 3444)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:47:39 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 3348)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:47:42 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (2.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 2.3ms | Allocations: 3348)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:50:01 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.3ms | Allocations: 3349)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:50:04 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.4ms | Allocations: 3348)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:50:13 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.4ms | Allocations: 3348)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:52:02 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.3ms | Allocations: 3348)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:52:17 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (3.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 3.3ms | Allocations: 3348)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:53:50 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.8ms | Allocations: 3349)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:53:53 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 1.3ms | Allocations: 3349)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:58:33 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (2.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 2.4ms | Allocations: 3348)
+
+
+Started GET "/books" for ::1 at 2020-02-06 23:58:36 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 3349)
+
+
+Started POST "/books" for ::1 at 2020-02-07 00:06:56 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (2.0ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 08:06:57.142450"], ["updated_at", "2020-02-07 08:06:57.142450"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 273ms (Views: 1.4ms | ActiveRecord: 2.9ms | Allocations: 2414)
+
+
+Started POST "/books" for ::1 at 2020-02-07 00:07:12 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 08:07:12.877686"], ["updated_at", "2020-02-07 08:07:12.877686"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 93ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 2390)
+
+
+Started GET "/books" for ::1 at 2020-02-07 00:17:22 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 21.7ms | ActiveRecord: 1.7ms | Allocations: 7743)
+
+
+Started GET "/books" for ::1 at 2020-02-07 00:17:27 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.6ms | Allocations: 3628)
+
+
+Started POST "/books" for ::1 at 2020-02-07 00:17:36 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.9ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 08:17:36.045002"], ["updated_at", "2020-02-07 08:17:36.045002"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 8ms (Views: 0.7ms | ActiveRecord: 1.6ms | Allocations: 2453)
+
+
+Started PUT "/books21" for ::1 at 2020-02-07 00:17:38 -0800
+  
+ActionController::RoutingError (No route matches [PUT] "/books21"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/books21" for ::1 at 2020-02-07 00:17:40 -0800
+  
+ActionController::RoutingError (No route matches [PUT] "/books21"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/books21" for ::1 at 2020-02-07 00:17:41 -0800
+  
+ActionController::RoutingError (No route matches [PUT] "/books21"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/books21" for ::1 at 2020-02-07 00:17:42 -0800
+  
+ActionController::RoutingError (No route matches [PUT] "/books21"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/books21" for ::1 at 2020-02-07 00:17:44 -0800
+  
+ActionController::RoutingError (No route matches [PUT] "/books21"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-02-07 00:18:38 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (2.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 2.2ms | Allocations: 3805)
+
+
+Started POST "/books" for ::1 at 2020-02-07 00:18:41 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.7ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 08:18:41.340110"], ["updated_at", "2020-02-07 08:18:41.340110"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 2.3ms | Allocations: 2420)
+
+
+Started PUT "/books22" for ::1 at 2020-02-07 00:18:44 -0800
+  
+ActionController::RoutingError (No route matches [PUT] "/books22"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-02-07 00:19:06 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 3907)
+
+
+Started GET "/books" for ::1 at 2020-02-07 00:19:09 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 3909)
+
+
+Started POST "/books" for ::1 at 2020-02-07 00:19:11 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 08:19:11.006361"], ["updated_at", "2020-02-07 08:19:11.006361"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 0.5ms | ActiveRecord: 1.0ms | Allocations: 2390)
+
+
+Started PUT "/books/23" for ::1 at 2020-02-07 00:19:15 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"4.6", "published"=>"", "img"=>""}, "id"=>"23"}
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (3.4ms)[0m  [1m[33mUPDATE "books" SET "customerReviews" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["customerReviews", 4], ["updated_at", "2020-02-07 08:19:15.395960"], ["id", 23]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 35ms (Views: 0.3ms | ActiveRecord: 5.4ms | Allocations: 5052)
+
+
+Started PUT "/books/23" for ::1 at 2020-02-07 00:19:23 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"4.6", "published"=>"", "img"=>""}, "id"=>"23"}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 1441)
+
+
+Started PUT "/books/23" for ::1 at 2020-02-07 00:19:26 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"ladsjhb", "author"=>"", "customerReviews"=>"4.6", "published"=>"", "img"=>""}, "id"=>"23"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["name", "ladsjhb"], ["updated_at", "2020-02-07 08:19:26.497665"], ["id", 23]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 1.9ms | Allocations: 3435)
+
+
+Started PUT "/books/23" for ::1 at 2020-02-07 00:19:27 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"ladsjhb", "author"=>"", "customerReviews"=>"4.6", "published"=>"", "img"=>""}, "id"=>"23"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1441)
+
+
+Started PUT "/books/23" for ::1 at 2020-02-07 00:19:35 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"ladsjhb", "author"=>"", "customerReviews"=>"4.6", "published"=>"", "img"=>""}, "id"=>"23"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1441)
+
+
+Started PUT "/books/23" for ::1 at 2020-02-07 00:19:37 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"ladsjhbda", "author"=>"", "customerReviews"=>"4.6", "published"=>"", "img"=>""}, "id"=>"23"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (2.0ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["name", "ladsjhbda"], ["updated_at", "2020-02-07 08:19:37.541125"], ["id", 23]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 3.2ms | Allocations: 3435)
+
+
+Started PUT "/books/23" for ::1 at 2020-02-07 00:19:40 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"ladsjhbda", "author"=>"sad", "customerReviews"=>"4.6", "published"=>"", "img"=>""}, "id"=>"23"}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (5.4ms)[0m  [1m[33mUPDATE "books" SET "author" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["author", "sad"], ["updated_at", "2020-02-07 08:19:40.418246"], ["id", 23]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 20ms (Views: 0.5ms | ActiveRecord: 8.6ms | Allocations: 3436)
+
+
+Started GET "/books" for ::1 at 2020-02-07 00:20:27 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY created_at DESC[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 4048)
+
+
+Started POST "/books" for ::1 at 2020-02-07 00:20:36 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 08:20:36.825690"], ["updated_at", "2020-02-07 08:20:36.825690"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 13ms (Views: 0.4ms | ActiveRecord: 1.7ms | Allocations: 2391)
+
+
+Started POST "/books" for ::1 at 2020-02-07 00:20:49 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", ""], ["author", ""], ["published", ""], ["img", ""], ["created_at", "2020-02-07 08:20:49.360611"], ["updated_at", "2020-02-07 08:20:49.360611"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 8ms (Views: 0.6ms | ActiveRecord: 2.1ms | Allocations: 2391)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:12 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>nil, "published"=>"", "img"=>""}, "id"=>"25"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1441)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:16 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>nil, "published"=>"", "img"=>""}, "id"=>"25"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1441)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:21 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>nil, "published"=>"", "img"=>""}, "id"=>"25"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1441)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:23 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"sdf", "author"=>"", "customerReviews"=>nil, "published"=>"", "img"=>""}, "id"=>"25"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["name", "sdf"], ["updated_at", "2020-02-07 08:21:23.173056"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 3435)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:24 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"sdf", "author"=>"asd", "customerReviews"=>nil, "published"=>"", "img"=>""}, "id"=>"25"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (1.8ms)[0m  [1m[33mUPDATE "books" SET "author" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["author", "asd"], ["updated_at", "2020-02-07 08:21:24.364268"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 12ms (Views: 0.3ms | ActiveRecord: 2.9ms | Allocations: 3437)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:28 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"sda", "author"=>"asd", "customerReviews"=>nil, "published"=>"", "img"=>""}, "id"=>"25"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["name", "sda"], ["updated_at", "2020-02-07 08:21:28.908206"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 1.6ms | Allocations: 3435)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:30 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"sda", "author"=>"asd", "customerReviews"=>nil, "published"=>"asdf", "img"=>""}, "id"=>"25"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (2.0ms)[0m  [1m[33mUPDATE "books" SET "published" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["published", "asdf"], ["updated_at", "2020-02-07 08:21:30.839896"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 2.8ms | Allocations: 3437)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:31 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"sda", "author"=>"asd", "customerReviews"=>nil, "published"=>"asdf", "img"=>"fasd"}, "id"=>"25"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (1.3ms)[0m  [1m[33mUPDATE "books" SET "img" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["img", "fasd"], ["updated_at", "2020-02-07 08:21:31.639705"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (14.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 25ms (Views: 0.5ms | ActiveRecord: 16.3ms | Allocations: 3438)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:36 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"sda", "author"=>"asd", "customerReviews"=>"4", "published"=>"asdf", "img"=>"fasd"}, "id"=>"25"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE "books" SET "customerReviews" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["customerReviews", 4], ["updated_at", "2020-02-07 08:21:36.492094"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 3436)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:21:37 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"sda", "author"=>"asd", "customerReviews"=>"4", "published"=>"asdf", "img"=>"fasd"}, "id"=>"25"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1441)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:23:54 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"asd", "customerReviews"=>"4", "published"=>"asdf", "img"=>"fasd"}, "id"=>"25"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["name", ""], ["updated_at", "2020-02-07 08:23:54.314204"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 3435)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:23:55 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"4", "published"=>"asdf", "img"=>"fasd"}, "id"=>"25"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "author" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["author", ""], ["updated_at", "2020-02-07 08:23:55.907929"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 1.5ms | Allocations: 3436)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:23:57 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"asdf", "img"=>"fasd"}, "id"=>"25"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "customerReviews" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["customerReviews", nil], ["updated_at", "2020-02-07 08:23:57.367393"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.6ms | Allocations: 3438)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:23:58 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"fasd"}, "id"=>"25"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "published" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["published", ""], ["updated_at", "2020-02-07 08:23:58.818728"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 3438)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:24:01 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}, "id"=>"25"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "img" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["img", ""], ["updated_at", "2020-02-07 08:24:01.474272"], ["id", 25]]
+  ↳ app/controllers/books_controller.rb:30:in `update'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:30:in `update'
+Completed 200 OK in 13ms (Views: 0.8ms | ActiveRecord: 1.7ms | Allocations: 3438)
+
+
+Started PUT "/books/25" for ::1 at 2020-02-07 00:24:38 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"book"=>{"name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>""}, "id"=>"25"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:42:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+DEPRECATION WARNING: update_attributes is deprecated and will be removed from Rails 6.1 (please, use update instead) (called from update at /Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/books_controller.rb:30)
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1441)
+
+

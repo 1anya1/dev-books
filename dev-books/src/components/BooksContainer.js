@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Book from './Book.js'
+import Book from './Book'
 import update from 'immutability-helper'
+import BookForm from './BookForm'
 class BooksContainer extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            books: []
+            books: [],
+            editBookId:null
         }
     }
     componentDidMount() {
@@ -32,27 +34,37 @@ class BooksContainer extends Component {
 
         )
         .then(response =>{
-            console.log(response)
-            const books = update(this.state.ideas, {
+            //console.log(response)
+            const books = update(this.state.books, {
                 $splice: [[0,0, response.data]]
             })
-            this.setState({books: books})
+            this.setState({books: books,
+            editBookId: response.data.id})
         })
         .catch (error=> console.log(error))
     }
+    
   render() {
     return (
-        <div className='container'>
+    <div>
+        <div>
             <button className='newBook'
             onClick={this.addNewBook}>
             New Book
-            </button>                    
+            </button>  
+        </div>                  
             
-        {this.state.books.map((book)=> {
-            return(
-                 <Book book={book} key={book.id} />
-            )
-        })}
+            {this.state.books.map((book) => {
+                    if(this.state.editBookId === book.id) {
+                      return(<BookForm book={book} key={book.id} />)
+                    } else {
+                      return (<Book book={book} key={book.id} />)
+                    }
+                  })}
+            {/* return(
+                 <Book book={book} key={book.id} />     
+            ) */}
+     
       </div>
     )
   }
