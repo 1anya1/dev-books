@@ -3,7 +3,7 @@ class BooksController < ApplicationController
 
   # GET /books
   def index
-    @books = Book.order('created_at DESC')
+    @books = Book.all
 
     render json: @books
   end
@@ -26,9 +26,11 @@ class BooksController < ApplicationController
 
   # PATCH/PUT /books/1
   def update
-    @book = Book.find(params[:id])
-    @book.update_attributes(book_params)
-    render json: @book
+    if @book.update(book_params)
+      render json: @book
+    else
+      render json: @book.errors, status: :unprocessable_entity
+    end
   end
 
   # DELETE /books/1

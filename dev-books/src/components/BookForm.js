@@ -13,6 +13,7 @@ class BookForm extends Component {
     }
   }
 handleInput = (e) =>{
+    this.props.resetNotification()
     this.setState({[e.target.name]: e.target.value})
 }
 handleBlur = () => {
@@ -30,7 +31,8 @@ axios.put(
     }
 )
 .then(response => {
-    console.log(response)
+    
+    this.props.updateBook(response.data)
 })
 .catch(error => console.log(error))
 }
