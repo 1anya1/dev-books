@@ -18,7 +18,7 @@ class Books extends Component {
                     <h5>{book.published}</h5>
                     <h5>Amazon Rating : {book.customerReviews}</h5>
                     <img src={book.img} alt=''></img>
-                    <button onClick={e => this.props.destroy(book.id, this.props.index)}>Delete</button>
+                    <button onClick={e => this.props.destroy(book.id, this.props.id)}>Delete</button>
                     
                 </div>
 

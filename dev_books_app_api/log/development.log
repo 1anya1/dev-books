@@ -16571,3 +16571,130 @@ Processing by BooksController#index as */*
 Completed 200 OK in 38ms (Views: 29.0ms | ActiveRecord: 0.8ms | Allocations: 927)
 
 
+Started GET "/books" for ::1 at 2020-02-07 13:24:19 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.6ms | Allocations: 1021)
+
+
+Started GET "/books" for ::1 at 2020-02-07 13:25:31 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 926)
+
+
+Started GET "/books" for ::1 at 2020-02-07 13:25:34 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.4ms | Allocations: 926)
+
+
+Started GET "/books" for ::1 at 2020-02-07 15:43:34 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 11.6ms | ActiveRecord: 0.7ms | Allocations: 1021)
+
+
+Started POST "/books" for ::1 at 2020-02-07 15:43:44 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"annaKey", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg", "book"=>{"name"=>"annaKey", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (2.1ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "customerReviews", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "annaKey"], ["author", "Anna"], ["customerReviews", 4], ["published", "2014"], ["img", "https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg"], ["created_at", "2020-02-07 23:43:44.498012"], ["updated_at", "2020-02-07 23:43:44.498012"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 25ms (Views: 1.6ms | ActiveRecord: 6.2ms | Allocations: 2408)
+
+
+Started POST "/books" for ::1 at 2020-02-07 15:43:53 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"a", "author"=>"Anna Filatova", "customerReviews"=>"", "published"=>"2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg", "book"=>{"name"=>"a", "author"=>"Anna Filatova", "customerReviews"=>"", "published"=>"2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.1ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "a"], ["author", "Anna Filatova"], ["published", "2014"], ["img", "https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg"], ["created_at", "2020-02-07 23:43:53.819823"], ["updated_at", "2020-02-07 23:43:53.819823"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 33ms (Views: 17.3ms | ActiveRecord: 1.7ms | Allocations: 2397)
+
+
+Started DELETE "/books/78" for ::1 at 2020-02-07 15:43:56 -0800
+Processing by BooksController#destroy as */*
+  Parameters: {"id"=>"78"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[36mBook Destroy (0.2ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 78]]
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+Completed 204 No Content in 7ms (ActiveRecord: 1.2ms | Allocations: 2202)
+
+
+Started GET "/books" for ::1 at 2020-02-07 15:45:04 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 1068)
+
+
+Started DELETE "/books/77" for ::1 at 2020-02-07 15:45:07 -0800
+Processing by BooksController#destroy as */*
+  Parameters: {"id"=>"77"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[36mBook Destroy (0.4ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 77]]
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+Completed 204 No Content in 20ms (ActiveRecord: 1.6ms | Allocations: 2177)
+
+
+Started GET "/books" for ::1 at 2020-02-07 15:45:11 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 926)
+
+
+Started GET "/books" for ::1 at 2020-02-07 15:45:36 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 926)
+
+
+Started DELETE "/books/79" for ::1 at 2020-02-07 15:45:38 -0800
+Processing by BooksController#destroy as */*
+  Parameters: {"id"=>"79"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 79], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[36mBook Destroy (0.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 79]]
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+Completed 204 No Content in 10ms (ActiveRecord: 1.2ms | Allocations: 2177)
+
+
+Started POST "/books" for ::1 at 2020-02-07 15:45:56 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"ABC", "author"=>"Anna Filatova", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://cdn.shopify.com/s/files/1/0662/5489/products/Scindapsus_pictus_Exotica_-_Satin_Pothos_-_pistils_nursery_1024x1024.jpg?v=1534278184", "book"=>{"name"=>"ABC", "author"=>"Anna Filatova", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://cdn.shopify.com/s/files/1/0662/5489/products/Scindapsus_pictus_Exotica_-_Satin_Pothos_-_pistils_nursery_1024x1024.jpg?v=1534278184"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.3ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "customerReviews", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "ABC"], ["author", "Anna Filatova"], ["customerReviews", 4], ["published", "2014"], ["img", "https://cdn.shopify.com/s/files/1/0662/5489/products/Scindapsus_pictus_Exotica_-_Satin_Pothos_-_pistils_nursery_1024x1024.jpg?v=1534278184"], ["created_at", "2020-02-07 23:45:56.321360"], ["updated_at", "2020-02-07 23:45:56.321360"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 1.2ms | ActiveRecord: 0.9ms | Allocations: 2407)
+
+
