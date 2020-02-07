@@ -14,15 +14,17 @@ class App extends Component {
       img: ''
     }
   }
-  componentDidMount() {
-    this.getBooks();
-  }
+
   getBooks = () => {
     fetch('http://localhost:3000/books')
       .then(response => response.json())
       .then(json => this.setState({ books: json }))
       .catch(error => console.log(error))
   }
+  componentDidMount() {
+    this.getBooks();
+  }
+
   handleChange = (event) => {
     const updateInput = Object.assign(this.state.formInputs, { [event.target.id]: event.target.value })
     this.setState(updateInput)
@@ -62,34 +64,37 @@ class App extends Component {
       .then((data) => {
         console.log(this.state)
         this.setState({
-          books: [...this.state.books.slice(0, index), ...this.state.books.slice(index + 1)]
+          books: [...this.state.books.splice(id, 1)]
         });
         console.log(this.state)
-      });
-
-  }
-  updateBook = (book, index) => {
-
-    book.delete = !book.delete;
-    fetch('http://localhost:3000/books' + book._id, {
-      body: JSON.stringify(book),
-      method: 'PUT',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      }
-
-    })
-      .then((updateBook) => this.updateBook.json())
-      .then((jsonedBook) => {
-        fetch('http://localhost:3000/books').then((response) => response.json()).then((books) => {
-          this.state({
-            books: books
-          })
+    
         })
 
-      })
+  
+
   }
+  // updateBook = (id) => {
+
+   
+  //   fetch('http://localhost:3000/books' + id, {
+  //     body: JSON.stringify(book),
+  //     method: 'PUT',
+  //     headers: {
+  //       'Accept': 'application/json, text/plain, */*',
+  //       'Content-Type': 'application/json'
+  //     }
+
+  //   })
+  //     .then((updateBook) => this.updateBook.json())
+  //     .then((jsonedBook) => {
+  //       fetch('http://localhost:3000/books').then((response) => response.json()).then((books) => {
+  //         this.state({
+  //           books: books
+  //         })
+  //       })
+
+  //     })
+  // }
 
   render() {
     return (
@@ -141,7 +146,8 @@ class App extends Component {
               {this.state.books.map((book, index) => {
                 return (
                   <div key={book.id} className='book'>
-                    <Books destroy={this.deleteBook} content={this.state.books} />
+                    <Books destroy={this.deleteBook} id={index} content={book} />
+                    
                   </div>
                 );
 
