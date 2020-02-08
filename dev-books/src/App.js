@@ -11,9 +11,18 @@ class App extends Component {
       author: '',
       customerReviews: '',
       published: '',
-      img: ''
-    }
-  }
+      img: '',
+    },
+    updateBook: {
+      name: '',
+      author: '',
+      customerReviews: '',
+      published: '',
+      img: '',
+    },
+    editable: false
+
+  };
   componentDidMount() {
     this.getBooks();
   }
@@ -27,6 +36,10 @@ class App extends Component {
     const updateInput = Object.assign(this.state.formInputs, { [event.target.id]: event.target.value })
     this.setState(updateInput)
   }
+handleUpdate = (event) => {
+  const updateBook = Object.assign(this.state.updateBook, {[event.target.id]: event.target.value})
+    this.setState(updateBook)
+}
 
   handleSubmit = (event) => {
     event.preventDefault()
@@ -48,7 +61,8 @@ class App extends Component {
             author: '',
             customerReviews: '',
             published: '',
-            img: ''
+            img: '',
+            
           },
           books: [jsonedBook, ...this.state.books]
         })
@@ -68,9 +82,17 @@ class App extends Component {
       });
 
   }
-  updateBook = (book, index) => {
-
-    book.delete = !book.delete;
+ editBook = (book, index) => {
+		console.log(this.state.editable);
+		this.setState({
+			editable: !this.state.editable
+		});
+  };
+  
+  
+  updateBook = (event, book) => {
+    event.preventDefault()
+    book.name = this.state.updateBook.name
     fetch('http://localhost:3000/books' + book._id, {
       body: JSON.stringify(book),
       method: 'PUT',
@@ -80,16 +102,29 @@ class App extends Component {
       }
 
     })
-      .then((updateBook) => this.updateBook.json())
+    
+    .then(updatedBook => {
+      return updatedBook.json()
+    })
       .then((jsonedBook) => {
         fetch('http://localhost:3000/books').then((response) => response.json()).then((books) => {
-          this.state({
-            books: books
+          this.setState({
+            books: books, 
+            editable: !this.state.editable, 
+            updateData: 
+            {
+              name: '',
+              author: '',
+              customerReviews: '',
+              published: '',
+              img: ''
+            } 
           })
         })
 
       })
   }
+  
 
   render() {
     return (
@@ -141,8 +176,57 @@ class App extends Component {
               {this.state.books.map((book, index) => {
                 return (
                   <div key={book.id} className='book'>
-                    <Books destroy={this.deleteBook} id={index} content={book} />
+                    <Books destroy={this.deleteBook} id={index} content={book}  edit={this.editBook}/>
+                    {this.state.editable && (
+                      <form onSubmit={this.handleChange} >
+                        <h2>Update Bookmark</h2>
+                        <label htmlFor="name">Name:</label>
+										      <input
+											        type="text"
+											        default={book.name}
+											        value={this.state.updateBook.name}
+											        onChange={this.handleUpdate}
+											        id="name"
+										  />
+                      <label htmlFor="author">Author:</label>
+										      <input
+											        type="text"
+											        default={book.author}
+											        value={this.state.updateBook.author}
+											        onChange={this.handleUpdate}
+											        id='author'
+										  />
+                      <label htmlFor="">Customer Reviews :</label>
+										      <input
+											        type="number"
+											        default={book.customerReviews}
+											        value={this.state.updateBook.customerReviews}
+											        onChange={this.handleUpdate}
+											        id="customerReviews"
+										  />
+                      <label htmlFor="published">Published:</label>
+										      <input
+											        type="text"
+											        default={book.published}
+											        value={this.state.updateBook.published}
+											        onChange={this.handleUpdate}
+											        id="published"
+										  />
+                      <label htmlFor="img"> Image URL:</label>
+										      <input
+											        type="text"
+											        default={book.img}
+											        value={this.state.updateBook.img}
+											        onChange={this.handleUpdate}
+											        id="img"
+										  />
+                      <input type='submit'/>
+
+
+                      </form>
+                    )}
                   </div>
+                  
                 );
 
               })}
