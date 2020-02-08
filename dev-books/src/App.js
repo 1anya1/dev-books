@@ -32,7 +32,7 @@ class App extends Component {
       .then(json => this.setState({ books: json }))
       .catch(error => console.log(error))
   }
-  handleChange = (event) => {
+handleChange = (event) => {
     const updateInput = Object.assign(this.state.formInputs, { [event.target.id]: event.target.value })
     this.setState(updateInput)
   }
@@ -93,7 +93,12 @@ handleUpdate = (event) => {
   updateBook = (event, book) => {
     event.preventDefault()
     book.name = this.state.updateBook.name
-    fetch('http://localhost:3000/books' + book._id, {
+    book.author = this.state.updateBook.author
+    book.customerReviews = this.state.updateBook.customerReviews
+    book.published = this.state.updateBook.published
+    book.img = this.state.updateBook.img
+
+    fetch('http://localhost:3000/books/' + book.id, {
       body: JSON.stringify(book),
       method: 'PUT',
       headers: {
@@ -176,10 +181,9 @@ handleUpdate = (event) => {
               {this.state.books.map((book, index) => {
                 return (
                   <div key={book.id} className='book'>
-                    <Books destroy={this.deleteBook} id={index} content={book}  edit={this.editBook}/>
+                    <Books destroy={this.deleteBook} id={index} content={book}  edit={this.editBook} />
                     {this.state.editable && (
                       <form onSubmit= {(e) => {
-                        e.preventDefault()
                         this.updateBook(e, book)
                       }}
                        >
