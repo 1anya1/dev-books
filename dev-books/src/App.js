@@ -178,7 +178,11 @@ handleUpdate = (event) => {
                   <div key={book.id} className='book'>
                     <Books destroy={this.deleteBook} id={index} content={book}  edit={this.editBook}/>
                     {this.state.editable && (
-                      <form onSubmit={this.handleChange} >
+                      <form onSubmit= {(e) => {
+                        e.preventDefault()
+                        this.updateBook(e, book)
+                      }}
+                       >
                         <h2>Update Bookmark</h2>
                         <label htmlFor="name">Name:</label>
 										      <input
