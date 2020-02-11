@@ -18453,3 +18453,1237 @@ Processing by BooksController#index as HTML
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.4ms | Allocations: 935)
 
 
+Started GET "/books" for ::1 at 2020-02-08 01:20:40 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.9ms | Allocations: 1019)
+
+
+Started GET "/books" for ::1 at 2020-02-08 01:21:01 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.0ms | Allocations: 926)
+
+
+Started GET "/books" for ::1 at 2020-02-08 01:24:24 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 926)
+
+
+Started DELETE "/books/86" for ::1 at 2020-02-08 12:01:39 -0800
+Processing by BooksController#destroy as */*
+  Parameters: {"id"=>"86"}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 86], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[36mBook Destroy (0.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 86]]
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+Completed 204 No Content in 136ms (ActiveRecord: 2.2ms | Allocations: 3858)
+
+
+Started POST "/books" for ::1 at 2020-02-08 12:03:11 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"The Principles of Object-Oriented JavaScript", "author"=>"Nicholas C. Zakas", "customerReviews"=>"4.5", "published"=>"2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg", "book"=>{"name"=>"The Principles of Object-Oriented JavaScript", "author"=>"Nicholas C. Zakas", "customerReviews"=>"4.5", "published"=>"2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (2.9ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "customerReviews", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "The Principles of Object-Oriented JavaScript"], ["author", "Nicholas C. Zakas"], ["customerReviews", 4], ["published", "2014"], ["img", "https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg"], ["created_at", "2020-02-08 20:03:11.083754"], ["updated_at", "2020-02-08 20:03:11.083754"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 89ms (Views: 12.7ms | ActiveRecord: 3.6ms | Allocations: 2412)
+
+
+Started POST "/books" for ::1 at 2020-02-08 12:04:15 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming", "author"=>"Marijn Haverbeke", "customerReviews"=>"4.6", "published"=>"December 4, 2018", "img"=>"https://images-na.ssl-images-amazon.com/images/I/51-5ZXYtcML._SX377_BO1,204,203,200_.jpg", "book"=>{"name"=>"Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming", "author"=>"Marijn Haverbeke", "customerReviews"=>"4.6", "published"=>"December 4, 2018", "img"=>"https://images-na.ssl-images-amazon.com/images/I/51-5ZXYtcML._SX377_BO1,204,203,200_.jpg"}}
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.9ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "customerReviews", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Eloquent JavaScript, 3rd Edition: A Modern Introduction to Programming"], ["author", "Marijn Haverbeke"], ["customerReviews", 4], ["published", "December 4, 2018"], ["img", "https://images-na.ssl-images-amazon.com/images/I/51-5ZXYtcML._SX377_BO1,204,203,200_.jpg"], ["created_at", "2020-02-08 20:04:15.478739"], ["updated_at", "2020-02-08 20:04:15.478739"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 31ms (Views: 2.8ms | ActiveRecord: 4.8ms | Allocations: 2410)
+
+
+Started POST "/books" for ::1 at 2020-02-08 12:05:13 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"JavaScript for Kids: A Playful Introduction to Programming ", "author"=>"Nick Morgan", "customerReviews"=>"", "published"=>"December 14, 2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/514ht8FykpL._SX384_BO1,204,203,200_.jpg", "book"=>{"name"=>"JavaScript for Kids: A Playful Introduction to Programming ", "author"=>"Nick Morgan", "customerReviews"=>"", "published"=>"December 14, 2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/514ht8FykpL._SX384_BO1,204,203,200_.jpg"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "JavaScript for Kids: A Playful Introduction to Programming "], ["author", "Nick Morgan"], ["published", "December 14, 2014"], ["img", "https://images-na.ssl-images-amazon.com/images/I/514ht8FykpL._SX384_BO1,204,203,200_.jpg"], ["created_at", "2020-02-08 20:05:13.996488"], ["updated_at", "2020-02-08 20:05:13.996488"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 36ms (Views: 4.7ms | ActiveRecord: 1.6ms | Allocations: 2400)
+
+
+Started GET "/books" for ::1 at 2020-02-08 12:05:23 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 1.3ms | Allocations: 1212)
+
+
+Started GET "/books" for ::1 at 2020-02-08 12:07:26 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.7ms | Allocations: 1209)
+
+
+Started GET "/books" for ::1 at 2020-02-08 12:11:19 -0800
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 32ms (Views: 13.0ms | ActiveRecord: 16.0ms | Allocations: 5975)
+
+
+Started GET "/books" for ::1 at 2020-02-08 12:11:20 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1229)
+
+
+Started PUT "/books/89" for ::1 at 2020-02-08 12:21:59 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"89", "name"=>"", "author"=>"", "customerReviews"=>"4.5", "published"=>"", "img"=>"", "created_at"=>"2020-02-08T20:05:13.996Z", "updated_at"=>"2020-02-08T20:05:13.996Z", "book"=>{"id"=>"89", "name"=>"", "author"=>"", "customerReviews"=>"4.5", "published"=>"", "img"=>"", "created_at"=>"2020-02-08T20:05:13.996Z", "updated_at"=>"2020-02-08T20:05:13.996Z"}}
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 89], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", ""], ["author", ""], ["customerReviews", 4], ["published", ""], ["img", ""], ["updated_at", "2020-02-08 20:21:59.289838"], ["id", 89]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 50ms (Views: 0.9ms | ActiveRecord: 1.7ms | Allocations: 4842)
+
+
+Started GET "/books" for ::1 at 2020-02-08 12:21:59 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1210)
+
+
+Started DELETE "/books/89" for ::1 at 2020-02-08 12:22:12 -0800
+Processing by BooksController#destroy as */*
+  Parameters: {"id"=>"89"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 89], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[36mBook Destroy (0.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 89]]
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+Completed 204 No Content in 20ms (ActiveRecord: 1.0ms | Allocations: 2216)
+
+
+Started GET "/books" for ::1 at 2020-02-08 12:24:50 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.6ms | Allocations: 1087)
+
+
+Started PUT "/books/88" for ::1 at 2020-02-08 12:35:13 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"88", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-08T20:04:15.478Z", "updated_at"=>"2020-02-08T20:04:15.478Z", "book"=>{"id"=>"88", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-08T20:04:15.478Z", "updated_at"=>"2020-02-08T20:04:15.478Z"}}
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (2.0ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", ""], ["author", ""], ["customerReviews", nil], ["published", ""], ["img", ""], ["updated_at", "2020-02-08 20:35:13.811028"], ["id", 88]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 36ms (Views: 1.8ms | ActiveRecord: 4.7ms | Allocations: 3108)
+
+
+Started GET "/books" for ::1 at 2020-02-08 12:35:13 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.2ms | Allocations: 1068)
+
+
+Started PUT "/books/88" for ::1 at 2020-02-08 12:35:27 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"88", "name"=>"annaKey", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"January 24, 2019", "img"=>"https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg", "created_at"=>"2020-02-08T20:04:15.478Z", "updated_at"=>"2020-02-08T20:35:13.811Z", "book"=>{"id"=>"88", "name"=>"annaKey", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"January 24, 2019", "img"=>"https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg", "created_at"=>"2020-02-08T20:04:15.478Z", "updated_at"=>"2020-02-08T20:35:13.811Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (0.8ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", "annaKey"], ["author", "Anna"], ["customerReviews", 4], ["published", "January 24, 2019"], ["img", "https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg"], ["updated_at", "2020-02-08 20:35:27.817038"], ["id", 88]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 22ms (Views: 1.1ms | ActiveRecord: 1.7ms | Allocations: 2984)
+
+
+Started GET "/books" for ::1 at 2020-02-08 12:35:27 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms | Allocations: 1068)
+
+
+Started GET "/" for ::1 at 2020-02-08 13:38:44 -0800
+  
+SyntaxError (/Users/anya/Desktop/dev-books/dev_books_app_api/app/controllers/welcome_controller.rb:4: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/welcome_controller.rb:4: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/welcome_controller.rb:4: syntax error, unexpected end-of-input, expecting `end'
+Started DELETE "/books/87" for ::1 at 2020-02-09 03:14:03 -0800
+Processing by BooksController#destroy as */*
+  Parameters: {"id"=>"87"}
+  [1m[36mBook Load (2.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 87], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[36mBook Destroy (2.8ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 87]]
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[35m (13.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+Completed 204 No Content in 71ms (ActiveRecord: 20.5ms | Allocations: 2337)
+
+
+Started GET "/books" for ::1 at 2020-02-09 03:14:07 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.4ms | Allocations: 938)
+
+
+Started POST "/books" for ::1 at 2020-02-09 03:14:16 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "book"=>{"name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (7.6ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "customerReviews", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "a"], ["author", "Anna"], ["customerReviews", 4], ["published", "2014"], ["img", "https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"], ["created_at", "2020-02-09 11:14:16.829327"], ["updated_at", "2020-02-09 11:14:16.829327"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 52ms (Views: 10.9ms | ActiveRecord: 8.2ms | Allocations: 2533)
+
+
+Started POST "/books" for ::1 at 2020-02-09 03:14:29 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"annaKey", "author"=>"Costa Farms ", "customerReviews"=>"", "published"=>"January 24, 2019", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "book"=>{"name"=>"annaKey", "author"=>"Costa Farms ", "customerReviews"=>"", "published"=>"January 24, 2019", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.4ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "annaKey"], ["author", "Costa Farms "], ["published", "January 24, 2019"], ["img", "https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"], ["created_at", "2020-02-09 11:14:29.647050"], ["updated_at", "2020-02-09 11:14:29.647050"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 18ms (Views: 1.2ms | ActiveRecord: 1.2ms | Allocations: 2399)
+
+
+Started DELETE "/books/90" for ::1 at 2020-02-09 03:14:32 -0800
+Processing by BooksController#destroy as */*
+  Parameters: {"id"=>"90"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[36mBook Destroy (0.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 90]]
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+Completed 204 No Content in 9ms (ActiveRecord: 1.8ms | Allocations: 2177)
+
+
+Started GET "/books" for ::1 at 2020-02-09 03:14:43 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 69.0ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-09 03:15:54 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 1.7ms | Allocations: 1068)
+
+
+Started GET "/books" for ::1 at 2020-02-09 03:16:40 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (2.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 2.0ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-09 03:16:41 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (5.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 5.8ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-09 03:17:15 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.8ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-09 03:17:35 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-09 03:18:43 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.0ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-09 03:21:12 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 1.6ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:42:33 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 1.9ms | Allocations: 1162)
+
+
+Started PUT "/books/88" for ::1 at 2020-02-10 03:43:01 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"88", "name"=>"b", "author"=>"  vv", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://cdn.shopify.com/s/files/1/0662/5489/products/Scindapsus_pictus_Exotica_-_Satin_Pothos_-_pistils_nursery_1024x1024.jpg?v=1534278184", "created_at"=>"2020-02-08T20:04:15.478Z", "updated_at"=>"2020-02-08T20:35:27.817Z", "book"=>{"id"=>"88", "name"=>"b", "author"=>"  vv", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://cdn.shopify.com/s/files/1/0662/5489/products/Scindapsus_pictus_Exotica_-_Satin_Pothos_-_pistils_nursery_1024x1024.jpg?v=1534278184", "created_at"=>"2020-02-08T20:04:15.478Z", "updated_at"=>"2020-02-08T20:35:27.817Z"}}
+  [1m[36mBook Load (1.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (5.9ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "published" = $3, "img" = $4, "updated_at" = $5 WHERE "books"."id" = $6[0m  [["name", "b"], ["author", "  vv"], ["published", "2014"], ["img", "https://cdn.shopify.com/s/files/1/0662/5489/products/Scindapsus_pictus_Exotica_-_Satin_Pothos_-_pistils_nursery_1024x1024.jpg?v=1534278184"], ["updated_at", "2020-02-10 11:43:01.833106"], ["id", 88]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 42ms (Views: 1.2ms | ActiveRecord: 8.8ms | Allocations: 3000)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:43:01 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 1067)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 03:43:40 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"Banana", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-09T11:14:29.647Z", "book"=>{"id"=>"91", "name"=>"Banana", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-09T11:14:29.647Z"}}
+  [1m[36mBook Load (11.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (1.2ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "published" = $3, "img" = $4, "updated_at" = $5 WHERE "books"."id" = $6[0m  [["name", "Banana"], ["author", ""], ["published", ""], ["img", "https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg"], ["updated_at", "2020-02-10 11:43:40.229764"], ["id", 91]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 35ms (Views: 1.7ms | ActiveRecord: 12.8ms | Allocations: 2970)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:43:40 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:43:52 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:44:40 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (6.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 38.0ms | ActiveRecord: 6.5ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:47:13 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (11.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 35.0ms | ActiveRecord: 11.9ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:48:19 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.3ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:49:27 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:49:48 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.3ms | Allocations: 1067)
+
+
+Started POST "/books" for ::1 at 2020-02-10 03:52:01 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"a", "author"=>"Anna Filatova", "customerReviews"=>"4.5", "published"=>"2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg", "book"=>{"name"=>"a", "author"=>"Anna Filatova", "customerReviews"=>"4.5", "published"=>"2014", "img"=>"https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (8.9ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "customerReviews", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "a"], ["author", "Anna Filatova"], ["customerReviews", 4], ["published", "2014"], ["img", "https://images-na.ssl-images-amazon.com/images/I/518hypqfQVL._SX376_BO1,204,203,200_.jpg"], ["created_at", "2020-02-10 11:52:01.127864"], ["updated_at", "2020-02-10 11:52:01.127864"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 58ms (Views: 9.0ms | ActiveRecord: 9.8ms | Allocations: 2407)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:54:21 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.5ms | Allocations: 1208)
+
+
+Started PUT "/books/88" for ::1 at 2020-02-10 03:54:41 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"88", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-08T20:04:15.478Z", "updated_at"=>"2020-02-10T11:43:01.833Z", "book"=>{"id"=>"88", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-08T20:04:15.478Z", "updated_at"=>"2020-02-10T11:43:01.833Z"}}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (1.5ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", ""], ["author", ""], ["customerReviews", nil], ["published", ""], ["img", ""], ["updated_at", "2020-02-10 11:54:41.266893"], ["id", 88]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 29ms (Views: 5.8ms | ActiveRecord: 2.5ms | Allocations: 2983)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:54:41 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 63ms (Views: 61.4ms | ActiveRecord: 0.3ms | Allocations: 1208)
+
+
+Started PUT "/books/92" for ::1 at 2020-02-10 03:54:50 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"92", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-10T11:52:01.127Z", "updated_at"=>"2020-02-10T11:52:01.127Z", "book"=>{"id"=>"92", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-10T11:52:01.127Z", "updated_at"=>"2020-02-10T11:52:01.127Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (0.3ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", ""], ["author", ""], ["customerReviews", nil], ["published", ""], ["img", ""], ["updated_at", "2020-02-10 11:54:50.027307"], ["id", 92]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2982)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:54:50 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.3ms | Allocations: 1206)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:55:10 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 1206)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 03:55:23 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"Banana", "author"=>"", "customerReviews"=>nil, "published"=>"", "img"=>"https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T11:43:40.229Z", "book"=>{"id"=>"91", "name"=>"Banana", "author"=>"", "customerReviews"=>nil, "published"=>"", "img"=>"https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T11:43:40.229Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 992)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:55:23 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 1206)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:56:41 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 1206)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:57:16 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 1206)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:57:38 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (2.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 2.9ms | Allocations: 1206)
+
+
+Started GET "/books" for ::1 at 2020-02-10 03:59:10 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 1206)
+
+
+Started PUT "/books/undefined" for ::1 at 2020-02-10 03:59:26 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"name"=>"annaKey", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "id"=>"undefined", "book"=>{"name"=>"annaKey", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"}}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms | Allocations: 607)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=undefined):
+  
+app/controllers/books_controller.rb:44:in `set_book'
+Started GET "/books" for ::1 at 2020-02-10 03:59:41 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 1205)
+
+
+Started PUT "/books/undefined" for ::1 at 2020-02-10 03:59:52 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "id"=>"undefined", "book"=>{"name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"}}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 602)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book with 'id'=undefined):
+  
+app/controllers/books_controller.rb:44:in `set_book'
+Started GET "/books" for ::1 at 2020-02-10 04:00:09 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1205)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:00:21 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.5", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T11:43:40.229Z", "book"=>{"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.5", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T11:43:40.229Z"}}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "img" = $4, "updated_at" = $5 WHERE "books"."id" = $6[0m  [["name", "a"], ["author", "Anna"], ["customerReviews", 4], ["img", ""], ["updated_at", "2020-02-10 12:00:21.366028"], ["id", 91]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2970)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:00:21 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1205)
+
+
+Started DELETE "/books/88" for ::1 at 2020-02-10 04:00:26 -0800
+Processing by BooksController#destroy as */*
+  Parameters: {"id"=>"88"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[36mBook Destroy (1.5ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 88]]
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+Completed 204 No Content in 12ms (ActiveRecord: 2.4ms | Allocations: 2177)
+
+
+Started DELETE "/books/92" for ::1 at 2020-02-10 04:00:28 -0800
+Processing by BooksController#destroy as */*
+  Parameters: {"id"=>"92"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[36mBook Destroy (0.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 92]]
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:38:in `destroy'
+Completed 204 No Content in 5ms (ActiveRecord: 1.2ms | Allocations: 2177)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:01:44 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.9ms | Allocations: 925)
+
+
+Started POST "/books" for ::1 at 2020-02-10 04:01:58 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "book"=>{"name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.3ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "customerReviews", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "a"], ["author", "Anna"], ["customerReviews", 4], ["published", "2014"], ["img", "https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"], ["created_at", "2020-02-10 12:01:58.457630"], ["updated_at", "2020-02-10 12:01:58.457630"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 6ms (Views: 0.6ms | ActiveRecord: 1.8ms | Allocations: 2407)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:05:31 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:05:35 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:05:50 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:05:52 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:08:35 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.3ms | Allocations: 1066)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:09:50 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:00:21.366Z", "book"=>{"id"=>"91", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:00:21.366Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (3.1ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "updated_at" = $4 WHERE "books"."id" = $5[0m  [["name", ""], ["author", ""], ["customerReviews", nil], ["updated_at", "2020-02-10 12:09:50.952286"], ["id", 91]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 4.0ms | Allocations: 2955)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:09:50 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started PUT "/books/93" for ::1 at 2020-02-10 04:10:00 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"93", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-10T12:01:58.457Z", "updated_at"=>"2020-02-10T12:01:58.457Z", "book"=>{"id"=>"93", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-10T12:01:58.457Z", "updated_at"=>"2020-02-10T12:01:58.457Z"}}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (0.8ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", ""], ["author", ""], ["customerReviews", nil], ["published", ""], ["img", ""], ["updated_at", "2020-02-10 12:10:00.549413"], ["id", 93]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 3.0ms | Allocations: 2982)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:10:00 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 1065)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:10:16 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:09:50.952Z", "book"=>{"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:09:50.952Z"}}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "updated_at" = $5 WHERE "books"."id" = $6[0m  [["name", "a"], ["author", "Anna"], ["customerReviews", 4], ["published", "2014"], ["updated_at", "2020-02-10 12:10:16.261605"], ["id", 91]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 2968)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:10:16 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.3ms | Allocations: 1065)
+
+
+Started PUT "/books/93" for ::1 at 2020-02-10 04:10:23 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"93", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-10T12:01:58.457Z", "updated_at"=>"2020-02-10T12:10:00.549Z", "book"=>{"id"=>"93", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-10T12:01:58.457Z", "updated_at"=>"2020-02-10T12:10:00.549Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (1.1ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "updated_at" = $5 WHERE "books"."id" = $6[0m  [["name", "a"], ["author", "Anna"], ["customerReviews", 4], ["published", "2014"], ["updated_at", "2020-02-10 12:10:23.428571"], ["id", 93]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 10ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 2968)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:10:23 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 1065)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:10:35 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z", "book"=>{"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z"}}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 988)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:10:35 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:10:46 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z", "book"=>{"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 988)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:10:46 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:11:10 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z", "book"=>{"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 989)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:11:10 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1065)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:11:13 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z", "book"=>{"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 988)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:11:13 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1065)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:11:14 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1065)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:11:21 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z", "book"=>{"id"=>"91", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:10:16.261Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (0.4ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "updated_at" = $5 WHERE "books"."id" = $6[0m  [["name", ""], ["author", ""], ["customerReviews", nil], ["published", ""], ["updated_at", "2020-02-10 12:11:21.462466"], ["id", 91]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 2968)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:11:21 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1065)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:11:29 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1065)
+
+
+Started PUT "/books/93" for ::1 at 2020-02-10 04:11:37 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"93", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "created_at"=>"2020-02-10T12:01:58.457Z", "updated_at"=>"2020-02-10T12:10:23.428Z", "book"=>{"id"=>"93", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "created_at"=>"2020-02-10T12:01:58.457Z", "updated_at"=>"2020-02-10T12:10:23.428Z"}}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", ""], ["author", ""], ["customerReviews", nil], ["published", ""], ["img", "https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"], ["updated_at", "2020-02-10 12:11:37.980617"], ["id", 93]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 2982)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:11:37 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:11:56 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://www.netflix.com/title/80113647", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:11:21.462Z", "book"=>{"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"2014", "img"=>"https://www.netflix.com/title/80113647", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:11:21.462Z"}}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (1.0ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", "a"], ["author", "Anna"], ["customerReviews", 4], ["published", "2014"], ["img", "https://www.netflix.com/title/80113647"], ["updated_at", "2020-02-10 12:11:56.280682"], ["id", 91]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 2982)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:11:56 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:12:35 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.4ms | Allocations: 1067)
+
+
+Started PUT "/books/93" for ::1 at 2020-02-10 04:12:49 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"93", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "created_at"=>"2020-02-10T12:01:58.457Z", "updated_at"=>"2020-02-10T12:11:37.980Z", "book"=>{"id"=>"93", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "created_at"=>"2020-02-10T12:01:58.457Z", "updated_at"=>"2020-02-10T12:11:37.980Z"}}
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+Completed 200 OK in 13ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 990)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:12:49 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:12:55 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 1067)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:13:21 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.5", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:11:56.280Z", "book"=>{"id"=>"91", "name"=>"a", "author"=>"Anna", "customerReviews"=>"4.5", "published"=>"2014", "img"=>"https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:11:56.280Z"}}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (0.5ms)[0m  [1m[33mUPDATE "books" SET "img" = $1, "updated_at" = $2 WHERE "books"."id" = $3[0m  [["img", "https://freight.cargo.site/w/1080/q/67/i/00337613b5639d6e76ccdd5d446e56d95b0bc4b919850156136bed4fb481b35f/Pothos-Pattern_1.jpg"], ["updated_at", "2020-02-10 12:13:21.126867"], ["id", 91]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 2933)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:13:21 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:15:48 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:16:20 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:18:18 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:19:09 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1067)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:19:35 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (2.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 2.3ms | Allocations: 1068)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:19:39 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.2ms | Allocations: 1068)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-10 04:19:46 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:13:21.126Z", "book"=>{"id"=>"91", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:13:21.126Z"}}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (1.9ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", ""], ["author", ""], ["customerReviews", nil], ["published", ""], ["img", ""], ["updated_at", "2020-02-10 12:19:46.320595"], ["id", 91]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 15ms (Views: 0.7ms | ActiveRecord: 2.9ms | Allocations: 2983)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:19:46 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:21:29 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:22:00 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:22:56 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 15.7ms | ActiveRecord: 1.4ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:24:13 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1066)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:27:39 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1066)
+
+
+Started POST "/books" for ::1 at 2020-02-10 04:27:54 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"January 24, 2019", "img"=>"https://www.netflix.com/title/80113647", "book"=>{"name"=>"a", "author"=>"Anna", "customerReviews"=>"4.6", "published"=>"January 24, 2019", "img"=>"https://www.netflix.com/title/80113647"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (1.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "customerReviews", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "a"], ["author", "Anna"], ["customerReviews", 4], ["published", "January 24, 2019"], ["img", "https://www.netflix.com/title/80113647"], ["created_at", "2020-02-10 12:27:54.565771"], ["updated_at", "2020-02-10 12:27:54.565771"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 13ms (Views: 1.2ms | ActiveRecord: 2.3ms | Allocations: 2407)
+
+
+Started POST "/books" for ::1 at 2020-02-10 04:28:24 -0800
+Processing by BooksController#create as HTML
+  Parameters: {"name"=>"a", "author"=>"Anna", "customerReviews"=>"", "published"=>"2014", "img"=>"https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg", "book"=>{"name"=>"a", "author"=>"Anna", "customerReviews"=>"", "published"=>"2014", "img"=>"https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[36mBook Create (0.5ms)[0m  [1m[32mINSERT INTO "books" ("name", "author", "published", "img", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "a"], ["author", "Anna"], ["published", "2014"], ["img", "https://bloomscape.com/wp-content/uploads/2019/04/bloomscape_product-monstera-slate.jpg"], ["created_at", "2020-02-10 12:28:24.506649"], ["updated_at", "2020-02-10 12:28:24.506649"]]
+  ↳ app/controllers/books_controller.rb:20:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:20:in `create'
+Completed 201 Created in 7ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 2396)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:31:59 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:32:40 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (2.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 2.8ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:33:38 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:33:52 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 1.1ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:36:55 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.9ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:38:48 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.3ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:40:42 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:41:30 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.6ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:41:43 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 1349)
+
+
+Started GET "/blogs/new" for ::1 at 2020-02-10 04:42:33 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/blogs/new"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/books" for ::1 at 2020-02-10 04:42:41 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 1346)
+
+
+Started GET "/books" for ::1 at 2020-02-10 04:44:23 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-11 13:23:04 -0800
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (7.9ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 214ms (Views: 143.9ms | ActiveRecord: 7.9ms | Allocations: 1443)
+
+
+Started GET "/books" for ::1 at 2020-02-11 13:23:13 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.3ms | Allocations: 1350)
+
+
+Started GET "/books" for ::1 at 2020-02-11 13:25:32 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (2.8ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 42ms (Views: 36.5ms | ActiveRecord: 2.8ms | Allocations: 1349)
+
+
+Started GET "/books" for ::1 at 2020-02-11 13:25:43 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.7ms | Allocations: 1349)
+
+
+Started PUT "/books/94" for ::1 at 2020-02-11 13:25:52 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"94", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-10T12:27:54.565Z", "updated_at"=>"2020-02-10T12:27:54.565Z", "book"=>{"id"=>"94", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-10T12:27:54.565Z", "updated_at"=>"2020-02-10T12:27:54.565Z"}}
+  [1m[36mBook Load (3.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[36mBook Update (6.1ms)[0m  [1m[33mUPDATE "books" SET "name" = $1, "author" = $2, "customerReviews" = $3, "published" = $4, "img" = $5, "updated_at" = $6 WHERE "books"."id" = $7[0m  [["name", ""], ["author", ""], ["customerReviews", nil], ["published", ""], ["img", ""], ["updated_at", "2020-02-11 21:25:52.676945"], ["id", 94]]
+  ↳ app/controllers/books_controller.rb:29:in `update'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/books_controller.rb:29:in `update'
+Completed 200 OK in 129ms (Views: 0.4ms | ActiveRecord: 17.3ms | Allocations: 3010)
+
+
+Started GET "/books" for ::1 at 2020-02-11 13:25:52 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.2ms | Allocations: 1348)
+
+
+Started PUT "/books/91" for ::1 at 2020-02-11 13:25:58 -0800
+Processing by BooksController#update as HTML
+  Parameters: {"id"=>"91", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:19:46.320Z", "book"=>{"id"=>"91", "name"=>"", "author"=>"", "customerReviews"=>"", "published"=>"", "img"=>"", "created_at"=>"2020-02-09T11:14:29.647Z", "updated_at"=>"2020-02-10T12:19:46.320Z"}}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:44:in `set_book'
+[31mUnpermitted parameters: :id, :created_at, :updated_at[0m
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 988)
+
+
+Started GET "/books" for ::1 at 2020-02-11 13:25:58 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 1348)
+
+

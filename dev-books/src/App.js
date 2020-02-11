@@ -74,11 +74,9 @@ handleUpdate = (event) => {
       method: 'DELETE'
     })
       .then((data) => {
-        console.log(this.state)
         this.setState({
           books: [...this.state.books.slice(0, index), ...this.state.books.slice(index + 1)]
         });
-        console.log(this.state)
       });
 
   }
@@ -182,19 +180,19 @@ handleUpdate = (event) => {
                 return (
                   <div key={book.id} className='book'>
                     <Books destroy={this.deleteBook} id={index} content={book}  edit={this.editBook} />
-                    {this.state.editable && (
+                    {this.state.editable &&  (
                       <form onSubmit= {(e) => {
                         this.updateBook(e, book)
                       }}
                        >
-                        <h2>Update Bookmark</h2>
+                        <h2>Update Book</h2>
                         <label htmlFor="name">Name:</label>
 										      <input
 											        type="text"
 											        default={book.name}
 											        value={this.state.updateBook.name}
 											        onChange={this.handleUpdate}
-											        id="name"
+											        id= {book.id}
 										  />
                       <label htmlFor="author">Author:</label>
 										      <input
@@ -202,7 +200,7 @@ handleUpdate = (event) => {
 											        default={book.author}
 											        value={this.state.updateBook.author}
 											        onChange={this.handleUpdate}
-											        id='author'
+											        id= {book.id}
 										  />
                       <label htmlFor="">Customer Reviews :</label>
 										      <input
@@ -210,7 +208,7 @@ handleUpdate = (event) => {
 											        default={book.customerReviews}
 											        value={this.state.updateBook.customerReviews}
 											        onChange={this.handleUpdate}
-											        id="customerReviews"
+											        id= {book.id}
 										  />
                       <label htmlFor="published">Published:</label>
 										      <input
@@ -218,7 +216,7 @@ handleUpdate = (event) => {
 											        default={book.published}
 											        value={this.state.updateBook.published}
 											        onChange={this.handleUpdate}
-											        id="published"
+											        id= {book.id}
 										  />
                       <label htmlFor="img"> Image URL:</label>
 										      <input
@@ -226,7 +224,7 @@ handleUpdate = (event) => {
 											        default={book.img}
 											        value={this.state.updateBook.img}
 											        onChange={this.handleUpdate}
-											        id="img"
+											        id= {book.id}
 										  />
                       <input type='submit'/>
 
