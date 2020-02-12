@@ -4,14 +4,15 @@ class Books extends Component {
 
     state = {
         books: [],
-    
+
   };
+
 
     render() {
         const book = this.props.content;
-        const updateBook = this.props.update.book;
-        const editBook = this.props.edit.book;
-        console.log(book)
+        const updateBook = this.props.update;
+        
+        // console.log(book)
         console.log(updateBook)
         return (
             <div>
@@ -24,9 +25,8 @@ class Books extends Component {
                     <img src={book.img} alt=''></img>
                     <button onClick={e => this.props.destroy(book.id, this.props.id)}>Delete</button>
                     <button onClick={e => this.props.edit(book.id)}>Update</button>
-                    
-                    
-                </div>
+                
+                
                 {this.state.editable &&  (
                       <form onSubmit= {(e) => {
                         this.updateBook(e, book)
@@ -39,7 +39,7 @@ class Books extends Component {
 											        default={book.name}
 											        value={this.state.updateBook.name}
 											        onChange={this.handleUpdate}
-											        id= {book.id}
+											        id= 'name'
 										  />
                       <label htmlFor="author">Author:</label>
 										      <input
@@ -47,7 +47,7 @@ class Books extends Component {
 											        default={book.author}
 											        value={this.state.updateBook.author}
 											        onChange={this.handleUpdate}
-											        id= {book.id}
+											        id= 'author'
 										  />
                       <label htmlFor="">Customer Reviews :</label>
 										      <input
@@ -55,7 +55,7 @@ class Books extends Component {
 											        default={book.customerReviews}
 											        value={this.state.updateBook.customerReviews}
 											        onChange={this.handleUpdate}
-											        id= {book.id}
+											        id= 'customerReviews'
 										  />
                       <label htmlFor="published">Published:</label>
 										      <input
@@ -63,7 +63,7 @@ class Books extends Component {
 											        default={book.published}
 											        value={this.state.updateBook.published}
 											        onChange={this.handleUpdate}
-											        id= {book.id}
+											        id= 'published'
 										  />
                       <label htmlFor="img"> Image URL:</label>
 										      <input
@@ -71,13 +71,14 @@ class Books extends Component {
 											        default={book.img}
 											        value={this.state.updateBook.img}
 											        onChange={this.handleUpdate}
-											        id= {book.id}
+											        id= 'img'
 										  />
                       <input type='submit'/>
 
 
                       </form>
                     )}
+                    </div>
 
 
             </div>
