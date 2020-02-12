@@ -179,58 +179,8 @@ handleUpdate = (event) => {
               {this.state.books.map((book, index) => {
                 return (
                   <div key={book.id} className='book'>
-                    <Books destroy={this.deleteBook} id={index} content={book}  edit={this.editBook} />
-                    {this.state.editable &&  (
-                      <form onSubmit= {(e) => {
-                        this.updateBook(e, book)
-                      }}
-                       >
-                        <h2>Update Book</h2>
-                        <label htmlFor="name">Name:</label>
-										      <input
-											        type="text"
-											        default={book.name}
-											        value={this.state.updateBook.name}
-											        onChange={this.handleUpdate}
-											        id= {book.id}
-										  />
-                      <label htmlFor="author">Author:</label>
-										      <input
-											        type="text"
-											        default={book.author}
-											        value={this.state.updateBook.author}
-											        onChange={this.handleUpdate}
-											        id= {book.id}
-										  />
-                      <label htmlFor="">Customer Reviews :</label>
-										      <input
-											        type="number"
-											        default={book.customerReviews}
-											        value={this.state.updateBook.customerReviews}
-											        onChange={this.handleUpdate}
-											        id= {book.id}
-										  />
-                      <label htmlFor="published">Published:</label>
-										      <input
-											        type="text"
-											        default={book.published}
-											        value={this.state.updateBook.published}
-											        onChange={this.handleUpdate}
-											        id= {book.id}
-										  />
-                      <label htmlFor="img"> Image URL:</label>
-										      <input
-											        type="text"
-											        default={book.img}
-											        value={this.state.updateBook.img}
-											        onChange={this.handleUpdate}
-											        id= {book.id}
-										  />
-                      <input type='submit'/>
-
-
-                      </form>
-                    )}
+                    <Books destroy={this.deleteBook} id={index} content={book} update={this.updateBook} edit={this.editBook} />
+                    
                   </div>
                   
                 );
