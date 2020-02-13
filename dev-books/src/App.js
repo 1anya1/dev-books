@@ -132,12 +132,12 @@ handleUpdate = (event) => {
   render() {
     return (
       <div className='App'>
-        <div className='container'>
+        <div className='root'>
 
 
           <nav>
             <h2>Add Book</h2>
-            <form onSubmit={this.handleSubmit}>
+            <form className='new' onSubmit={this.handleSubmit}>
               <div>
                 <label htmlFor='author'>Author</label>
                 <input type='text' id='author'
@@ -168,6 +168,8 @@ handleUpdate = (event) => {
                   value={this.state.formInputs.img}
                   onChange={this.handleChange} />
               </div>
+              <div></div>
+              <div></div>
               <div>
                 <input type='submit' className='submit' />
               </div>
@@ -179,8 +181,58 @@ handleUpdate = (event) => {
               {this.state.books.map((book, index) => {
                 return (
                   <div key={book.id} className='book'>
-                    <Books destroy={this.deleteBook} id={index} content={book} update={this.updateBook} edit={this.editBook} />
-                    
+                    <Books destroy={this.deleteBook} id={index} content={book}  update={this.updateBook} edit={this.editBook} />
+                    {this.state.editable && (
+                      <form onSubmit= {(e) => {
+                        this.updateBook(e, book)
+                      }}
+                       >
+                        <h2>Update Book</h2>
+                        <label htmlFor="name">Name:</label>
+										      <input
+											        type="text"
+											        default={book.name}
+											        value={this.state.updateBook.name}
+											        onChange={this.handleUpdate}
+											        id="name"
+										  />
+                      <label htmlFor="author">Author:</label>
+										      <input
+											        type="text"
+											        default={book.author}
+											        value={this.state.updateBook.author}
+											        onChange={this.handleUpdate}
+											        id='author'
+										  />
+                      <label htmlFor="">Customer Reviews :</label>
+										      <input
+											        type="number"
+											        default={book.customerReviews}
+											        value={this.state.updateBook.customerReviews}
+											        onChange={this.handleUpdate}
+											        id="customerReviews"
+										  />
+                      <label htmlFor="published">Published:</label>
+										      <input
+											        type="text"
+											        default={book.published}
+											        value={this.state.updateBook.published}
+											        onChange={this.handleUpdate}
+											        id="published"
+										  />
+                      <label htmlFor="img"> Image URL:</label>
+										      <input
+											        type="text"
+											        default={book.img}
+											        value={this.state.updateBook.img}
+											        onChange={this.handleUpdate}
+											        id="img"
+										  />
+                      <input type='submit'/>
+
+
+                      </form>
+                    )}
                   </div>
                   
                 );
@@ -189,8 +241,6 @@ handleUpdate = (event) => {
 
             </div>
           </main>
-
-          <footer />
         </div>
       </div>
     )
