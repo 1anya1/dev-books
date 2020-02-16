@@ -22324,3 +22324,10 @@ Processing by BooksController#index as */*
 Completed 200 OK in 18ms (Views: 7.7ms | ActiveRecord: 7.7ms | Allocations: 6154)
 
 
+Started GET "/books" for ::1 at 2020-02-16 14:09:24 -0800
+Processing by BooksController#index as */*
+  [1m[36mBook Load (1.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/controllers/books_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 9.8ms | ActiveRecord: 1.7ms | Allocations: 1459)
+
+
